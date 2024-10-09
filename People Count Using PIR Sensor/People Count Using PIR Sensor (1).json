@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "akhila Karthik",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 96.6, "left": 66.6, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -51.2,
+      "left": -215.2,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -130.4,
+      "left": 203.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir2",
+      "top": -149.6,
+      "left": 405.42,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h-48", "v364.8", "h0" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-28.8", "v336.1", "h470.4" ] ],
+    [ "lcd1:SDA", "uno:A4.2", "green", [ "h-19.2", "v86.6", "h393.6" ] ],
+    [ "lcd1:SCL", "uno:A5.2", "green", [ "h-9.6", "v57.9", "h374.4" ] ],
+    [ "pir1:VCC", "uno:5V", "red", [ "v19.2", "h-124.8", "v96", "h-115.2", "v288", "h9.6" ] ],
+    [ "pir1:OUT", "uno:6", "green", [ "v105.6", "h19.06" ] ],
+    [ "pir1:GND", "uno:GND.1", "black", [ "v86.4", "h-77.06" ] ],
+    [ "pir2:VCC", "uno:5V", "red", [ "v451.2", "h-211.2" ] ],
+    [ "pir2:OUT", "uno:4", "green", [ "v105.6", "h-163.34" ] ],
+    [ "pir2:GND", "uno:GND.3", "black", [ "v393.6", "h-211.46" ] ]
+  ],
+  "dependencies": {}
+}
